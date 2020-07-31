@@ -23,6 +23,7 @@ describe('AppComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
   });
 
   it('should create the app', () => {
@@ -33,6 +34,7 @@ describe('AppComponent', () => {
   it('should add the extra css class to the preview', () => {
     const preview = ngMocks.findInstance(fixture.debugElement, CdkDragPreview) as MockedDirective<CdkDragPreview>;
     preview.__render();
+    fixture.detectChanges();
 
     // don't know how to get the classes from the preview, so do a normal query
     expect(fixture.debugElement.query(By.css('.dragdrop-preview')).nativeElement).toHaveClass('extra-class');

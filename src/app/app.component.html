@@ -1,4 +1,6 @@
-<div cdkDrag>
+<!-- <div [@collapse]="{ value: true }"> -->
+<div cdkDrag *ngFor="let item of [1]">
   <div class="dragdrop-preview" [class.extra-class]="true" *cdkDragPreview>Preview</div>
 </div>
+<!-- </div> -->
 <router-outlet></router-outlet>
